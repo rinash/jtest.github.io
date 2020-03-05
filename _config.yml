@@ -9,8 +9,8 @@
 title: Lanamark
 author: "Lanamark Inc."
 email: your-email@domain.com
-baseurl: "rinash.github.io" # the subpath of your site, e.g. /blog
-url: "jtest.github.io" # the base hostname & protocol for your site
+baseurl: "jtest.github.io" # the subpath of your site, e.g. /blog
+url: "rinash.github.io" # the base hostname & protocol for your site
 domain: "lanamark.com" # the base hostname & protocol for your site
 formaction: "////formspree.io/mark@lanamark.com"
 
