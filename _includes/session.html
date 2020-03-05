@@ -1,0 +1,38 @@
+{% for session in site.pages %}
+  {% if session.type == 'session' and session.id == include.id %}
+    <div class="section sessions">
+      <div class="inner">
+        <div class="wrap">
+        <section class="session">
+          <header>
+            <h2>
+              {{ session.title }}
+              <span class="code">{{ session.code }}</span>
+            </h2>
+          </header>
+          <article>
+            <p>{{ session.text }}</p>
+            <div class="data-wrap">
+              <ul>
+                {% for section in session.sections %}
+                  <li>
+                    <h3>{{ section.header }}</h3>
+                    {% if section.columns  %}
+                      <div class="list">
+                        {% for column in section.columns %}
+                          {% for item in column %}
+                            <p class="{{ section.class }}">{{ item }}</p>
+                          {% endfor %}
+                        {% endfor %}
+                      </div>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endfor %}

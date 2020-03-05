@@ -1,0 +1,118 @@
+.about {
+  .promo-panel {
+    padding: 116px 0;
+    background: none;
+    text-align: left;
+    border-bottom: 1px solid #edeff1;
+
+    .wrap {
+      width: 942px;
+      position: relative;
+    }
+
+    .title {
+      width: 78%;
+      padding: 30px 7% 30px 0;
+      #font .nimbus(16, 400, 1.4em);
+      color: @grey;
+      border-right: 1px solid #edeff1;
+    }
+
+    .button {
+      color: @grey;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -30px;
+    }
+
+    @media (max-width: 1024px){
+      .wrap {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 960px){
+      padding: 80px;
+
+      .title {
+        width: 100%;
+        border-right: 0;
+        padding-right: 0;
+        text-align: center;
+      }
+
+      .call-to-action.to-right {
+        text-align: center;
+      }
+
+      .button {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 0;
+        margin: auto;
+      }
+    }
+
+    @media (max-width: 600px){
+      padding: 40px 0 60px;
+    }
+  }
+
+  .key-features {
+    padding-top: 100px;
+    border: none !important;
+  }
+
+  .addresses {
+    padding-bottom: 40px;
+
+    .wrap {
+      width: 1100px;
+    }
+
+    @media (max-width: 830px) {
+      .wrap {
+        width: 100%;
+      }
+
+      .columns {
+        .column {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .maps {
+    overflow: hidden;
+
+    .map {
+      display: inline-block;
+      .size(33.33%, 280px);
+      text-indent: -9999;
+      overflow: hidden;
+
+      &--kitchener {
+        background: url(../images/maps/kitchener.jpg) repeat center center;
+        .background-size(cover);
+      }
+
+      &--center-side {
+        float: left;
+        background: url(../images/maps/toronto.jpg) repeat center center;
+        .background-size(cover);
+      }
+      &--right-side {
+        float: right;
+        background: url(../images/maps/brno.jpg) repeat center center;
+        .background-size(cover);
+      }
+    }
+
+    @media (max-width: 600px){
+      display: none;
+    }
+  }
+}

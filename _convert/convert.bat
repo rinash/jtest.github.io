@@ -1,0 +1,2 @@
+@echo off
+lessc --clean-css  C:\git\site\lanamark.github.io\assets\styles\less\main.less  C:\git\site\lanamark.github.io\assets\styles\css\main.css --source-map=C:\git\site\lanamark.github.io\assets\styles\css\main.css.map && @echo "Convert Ok!" 

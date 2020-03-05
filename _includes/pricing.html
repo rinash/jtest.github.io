@@ -1,0 +1,33 @@
+{% for pricing in site.pages %}
+  {% if pricing.type == 'pricing' %}
+    <div class="section price-tables">
+      <div class="inner">
+        <div class="wrap">
+          <h2>{{ pricing.title }}</h2>
+
+          <div class="columns prices">
+            {% for price in pricing.prices %}
+              <div class="column">
+                <div class="type">{{ price.header }}</div>
+                <div class="price-box">
+                  <div class="highlighted">
+                    <span class="price">{{ price.cost }}</span>
+                    <span class="month">per year</span>
+                  </div>
+                  {% for feature in price.features %}
+                    <div class="feature"><a href={{ feature.url | prepend: site.baseurl }}>{{ feature.name }}</a><br /><small>{{ feature.description }}</small></div>
+                  {% endfor %}
+                  <div class="signup">
+                    <span class="units">{{ price.units }} Servers</span>
+                    <small>{{ price.description }} </small>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="price-footer">{{ pricing.footer }}</div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endfor %}

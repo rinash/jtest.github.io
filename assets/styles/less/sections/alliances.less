@@ -1,0 +1,83 @@
+// Sizing shortcuts
+.image-size(@width, @height) {
+  .size(@width, @height);
+  .background-size(100% auto);
+
+  &:hover {
+    background-position: 0 calc(-@height - 1);
+  }
+}
+
+.alliances {
+  padding: 108px 0 121px 0;
+  background: #f1f3f5 url(../images/grey-shapes.jpg) no-repeat center center;
+  .background-size(cover);
+
+  .columns {
+    margin-top: 89px;
+  }
+
+  .company {
+    display: inline-block;
+    text-indent: -9999px;
+    overflow: hidden;
+
+    &.cisco {
+      margin-right: 80px;
+      background: url(../images/alliances/cisco.png) no-repeat 0 0;
+      .image-size(141px, 74px);
+    }
+
+    &.lenovo {
+      margin-top: 15px;
+      background: url(../images/alliances/lenovo.png) no-repeat 0 0;
+      .image-size(152px, 50px);
+    }
+
+    &.netapp {
+      margin-left: 80px;
+      margin-top: 15px;
+      background: url(../images/alliances/netapp.png) no-repeat 0 0;
+      .image-size(190px, 50px);
+    }
+  }
+
+  @media (max-width: 960px){
+    padding: 80px 0;
+
+    .columns {
+      margin-top: 60px;
+    }
+
+    .company {
+      &.cisco, &.lenovo, &.netapp {
+        margin: 0;
+      }
+
+      &.cisco  { .image-size(70px, 37px);}
+      &.lenovo { .image-size(111px, 36px); }
+      &.netapp { .image-size(119px, 30px); }
+    }
+  }
+
+  @media (max-width: 490px){
+    padding: 80px 0;
+
+    .columns {
+      margin-top: 40px;
+
+      .column {
+        float: none;
+        width: 100%;
+      }
+    }
+
+    .company {
+      margin-bottom: 40px;
+
+       &.lenovo, &.netapp {
+        margin-top: 40px;
+      }
+    }
+  }
+}

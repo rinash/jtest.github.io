@@ -1,0 +1,190 @@
+// New IQ styles
+// -------------------------------------------------------
+
+@darkblue: #1e253f;
+@blue: #28366b;
+@lightblue1: #c0c5e3;
+@lightblue2: #767ca1;
+@orange: #ff523c;
+@white: #fff;
+
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("../fonts/Sofia Pro Regular.ttf");
+}
+
+@font-face {
+  font-family: "Sofia Pro Light";
+  src: url("../fonts/Sofia Pro Light.ttf");
+}
+
+@font-face {
+  font-family: "Sofia Pro UltraLight";
+  src: url("../fonts/Sofia Pro UltraLight.ttf");
+}
+
+.newiq-back {
+  background: @darkblue;
+}
+
+.newiq-body {
+  font-family: "Sofia Pro UltraLight", sans-serif;
+  font-style: normal;
+  background: @darkblue url(../images/newiq/background.jpg) repeat center center;
+  .background-size(cover);
+  height: 100%;
+  min-height: 100vh;
+}
+
+.newiq-header {
+  height: 170px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.newiq-logo {
+  margin-left: 90px;
+  background: url(../images/newiq/logo.png) no-repeat;
+  .background-size(cover);
+  height: 57px;
+  width: 281px;
+}
+
+.newiq-menu {
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
+}
+
+.newiq-menu-item {
+  min-width: 100px;
+  color: @white;
+  font-size: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+
+  &.active {
+    color: @orange;
+  }
+
+  &:last-child {
+    margin-right: 180px;
+  }
+}
+
+.newiq-titles {
+  width: 100%;
+  margin-top: 120px;
+  margin-bottom: 60px;
+}
+
+.newiq-title {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  color: @white;
+  font-size: 64px;
+  max-width: 1124px;
+  text-align: center;
+
+  & > span.orange {
+    color: @orange;
+    font-weight: 400;
+    font-family: "Sofia Pro Light", sans-serif;
+
+    & > div.newiq-nowrap {
+      display: inline-block;
+      white-space: nowrap;
+    }
+  }
+}
+
+.newiq-subtitle {
+  margin: 0 auto;
+  color: @lightblue1;
+  font-size: 32px;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.newiq-timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+  }
+}
+
+.newiq-timer-value {
+  color: @white;
+  font-size: 136px;
+}
+
+.newiq-timer-description {
+  color: @lightblue2;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 1024px) {
+  .newiq-header {
+    height: 100px;
+  }
+
+  .newiq-logo {
+    margin-left: 30px;
+    height: 28px;
+    width: 140px;
+  }
+
+  .newiq-titles {
+    margin-top: 60px;
+  }
+
+  .newiq-title {
+    font-size: 30px;
+    max-width: 600px;
+  }
+
+  .newiq-subtitle {
+    font-size: 16px;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 800px) {
+  .newiq-title {
+    max-width: 500px;
+  }
+
+  .newiq-subtitle {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .newiq-title {
+    max-width: 400px;
+  }
+
+  .newiq-subtitle {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 400px) {
+  .newiq-title {
+    max-width: 300px;
+  }
+
+  .newiq-subtitle {
+    max-width: 300px;
+  }
+}

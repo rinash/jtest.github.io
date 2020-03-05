@@ -1,0 +1,90 @@
+
+// Site default
+// -------------------------------------------------------
+
+* {
+  .box-sizing(border-box);
+}
+
+html {
+  background: @bodyBackground;
+}
+html,
+body {
+  .square(100%);
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  color: @bodyColor;
+  text-align: center;
+  #font #family .nimbus();
+}
+
+section {
+  padding: 0;
+  margin: 0;
+}
+
+// Site custom
+// -------------------------------------------------------
+
+.section {
+  .size(100%, auto);
+
+  .inner {
+    .size(1360px, auto);
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1440px){
+    .inner {
+      width: 100%;
+      padding: 0 60px;
+    }
+  }
+  @media (max-width: 600px){
+    .inner {
+      padding: 0 40px;
+    }
+  }
+}
+
+.social-media-bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+
+  a {
+    opacity: 0.5;
+    margin: 5px;
+    display: block;
+    .square(42px);
+    background-color: #F98327;
+    margin-right: 8px;
+    .rounded(3px);
+    text-indent: -9999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+    .transition(all .4s ease);
+
+    &.twitter {
+      background-image: url(../images/twitter-w.png);
+    }
+    &.linkedin {
+      background-image: url(../images/linkedin-w.png);
+    }
+    &.chat {
+      background-image: url(../images/chat-w.png);
+    }
+
+    &:hover {
+      opacity: 1;
+      //background-color: darken(#EDEFF2, 6%);
+    }
+  }
+}

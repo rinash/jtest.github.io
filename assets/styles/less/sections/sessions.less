@@ -1,0 +1,79 @@
+.sessions {
+  .inner {
+
+    @media (max-width: 1024px){
+      padding: 0;
+    }
+
+    .wrap {
+      .icon {
+        margin-top: 49px;
+        margin-bottom: 48px;
+      }
+
+      > section {
+
+        .data-wrap {
+          margin-top: 10px;
+          min-height: 180px;
+
+          ul {
+
+            li {
+              width: 40%;
+              float: left;
+
+              &:nth-child(even) {
+                width: 60%;
+              }
+
+              h3 {
+                #font .nimbus(16, 300, 1.5em);
+                color: #222;
+                margin: 10px 0;
+              }
+
+              .list {
+                margin-top: 10px;
+
+                p {
+                  #font .nimbus(16, 300, 1.5em);
+                  color: @grey;
+                  padding-left: 30px;
+
+                  &.schedule {
+                    background: url(../images/calendar-2.png) no-repeat 0 0;
+                    .background-size(18px 18px);
+                    background-position-y: 1px;
+                  }
+
+                  &.presenter {
+                    background: url(../images/business-statistics-2.png) no-repeat 0 0;
+                    .background-size(18px 18px);
+                    background-position-y: 1px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        @media (max-width: 600px){
+          .data-wrap {
+
+            ul {
+              li {
+                float: none;
+                width: 100%;
+
+                &:nth-child(even) {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
